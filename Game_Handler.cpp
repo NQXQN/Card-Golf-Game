@@ -51,6 +51,22 @@ void Game_Handler::playGame()
 		}
 	}
 
+	postGame(); // runs post game actions
+
+
+}
+
+void Game_Handler::postGame() {
+	hand.flipAllCards();
+	hand.displayHand();
+
+
+	cout << "\n";
+	cout << "--------------------------GAME-OVER--------------------------\n";
+	cout << "-------------------------------------------------------------\n";
+	cout << "                      Your score is: " << hand.handTotal() << "\n";
+	cout << "\n";
+
 
 }
 

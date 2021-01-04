@@ -51,3 +51,28 @@ Card& PlayerHand::accessPlayerHandTop(int loc) {
 Card& PlayerHand::accessPlayerHandBottom(int loc) {
 	return playerHandBottom.at(loc);
 }
+
+int PlayerHand::handTotal()
+{
+	int sum{ 0 };
+
+	for (int i{ 0 }; i < 3; i++) {
+		sum += playerHandTop.at(i).getVal();
+		sum += playerHandBottom.at(i).getVal();
+	}
+
+	return sum;
+}
+
+void PlayerHand::flipAllCards()
+{
+	for (int i{ 0 }; i < 3; i++) {
+		if (!playerHandTop.at(i).showStatus()) {
+			playerHandTop.at(i).flip();
+		}
+
+		if (!playerHandBottom.at(i).showStatus()) {
+			playerHandBottom.at(i).flip();
+		}
+	}
+}

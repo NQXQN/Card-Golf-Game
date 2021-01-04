@@ -8,6 +8,7 @@ class Game_Handler
 public:
 	void setup(); //initialize & shuffle deck, deal initial cards to player, reveal top card of deck
 	void playGame(); //loop that runs until player has played 9 rounds
+	void postGame();
 	Game_Handler();
 
 

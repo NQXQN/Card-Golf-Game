@@ -15,6 +15,8 @@ public:
 	void displayHand(); // done
 	Card& accessPlayerHandTop(int loc); // done
 	Card& accessPlayerHandBottom(int loc); // done
+	int handTotal();
+	void flipAllCards();
 
 
 private:
